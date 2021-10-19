@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 // refrences /routes folder
 var bookRouter = require('./routes/book');
+var customerRouter = require('./routes/customer');
 
 var app = express();
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // actual url refrence
-app.use('/book', bookRouter)
+app.use('/book', bookRouter);
+app.use('/customer', customerRouter);
 
 module.exports = app;

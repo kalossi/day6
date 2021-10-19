@@ -23,7 +23,6 @@ router.get('/:id?',
   }
 });
 
-
 router.post('/', 
 function(request, response) {
   book.add(request.body, function(err, dbResult) {
