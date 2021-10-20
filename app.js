@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 // refrences /routes folder
 var bookRouter = require('./routes/book');
+var borrowRouter = require('./routes/borrow');
 // var customerRouter = require('./routes/customer');
 
 var app = express();
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // actual url refrence
 app.use('/book', bookRouter);
+app.use('/borrow', borrowRouter);
 // app.use('/customer', customerRouter);
 
 module.exports = app;
